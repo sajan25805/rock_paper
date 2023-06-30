@@ -3,16 +3,15 @@
 
 <head>
     <title>Rock Paper Scissors</title>
-
     <script src="script.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href=".option-button">Home</a>
+        <a href=".option-button">About</a>
+        <a href=".option-button">Contact</a>
     </div>
     <section>
         <div class="flex-container">
@@ -24,11 +23,11 @@
                     <button class="option-button" onclick="playGame('rock')">Rock</button>
                 </div>
                 <div id="result" class="result-card">
+                    <div id="loader" class="loader"></div>
                     <h2 class="result-title">Result</h2>
                     <p class="result-message"></p>
                 </div>
             </div>
-            <div id="loader" class="loader"></div>
         </div>
     </section>
 </body>

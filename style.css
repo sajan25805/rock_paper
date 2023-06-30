@@ -32,9 +32,13 @@ section .flex-container {
   box-shadow: -2px 12px 12px 5px rgba(0, 0, 0, 0.7);
 }
 
+
 .navbar {
-  background-color: #333;
+  background-color:  #021f08;
   overflow: hidden;
+  font-size: 20px;
+  font-weight: bold;
+  padding:10px;
 }
 
 .navbar a {
@@ -43,8 +47,8 @@ section .flex-container {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
   transition: background-color 0.3s;
+  margin-left: 10px;
 }
 
 .navbar a:hover {
@@ -76,13 +80,12 @@ h1 {
   background-color: #4CAF50;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 25px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
   margin: 0 10px;
 }
-
 
 .result-card {
   background-color: #fff;
@@ -111,6 +114,8 @@ h1 {
 .result-message {
   font-size: 20px;
   margin-bottom: 20px;
+  font-weight: bold;
+  color: #4CAF50;
 }
 
 .result-message span {
@@ -124,17 +129,21 @@ h1 {
 
 .loader {
   display: none;
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+  border: 8px solid #03300d; /* Light grey */
+  border-top: 8px solid #0f9b0f; /* Blue */
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  animation: spin 1.5s linear infinite;
+  animation: spin 3s linear infinite; /* Updated animation time */
   margin: 0 auto;
   margin-bottom: 20px;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

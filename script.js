@@ -9,10 +9,8 @@ function playGame(userChoice) {
   // Hide the result card
   resultCard.classList.remove('show');
 
-
-
   // Delay the result calculation for 1 second
-  setTimeout(function() {
+  setTimeout(function () {
     const result = determineWinner(userChoice, computerChoice);
 
     // Update the result message
@@ -23,10 +21,8 @@ function playGame(userChoice) {
 
     // Show the result card
     resultCard.classList.add('show');
-  }, 1000);
+  }, 1000); // Increased the delay to 3 seconds (3000 milliseconds)
 }
-
-
 
 // Generate a random choice for the computer
 function getComputerChoice() {
@@ -34,11 +30,12 @@ function getComputerChoice() {
   const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 }
-  // Generate a random choice for the computer
+
+// Generate a random choice for the computer
 const computerChoice = getComputerChoice();
 
-let computerMessage = `Computer Chooses: ${computerChoice},Computer Win!`;
-let userMessage = `Computer Chooses: ${computerChoice}, You Win! `
+let computerMessage = `Computer Chooses: ${computerChoice}, Computer Win!`;
+let userMessage = `Computer Chooses: ${computerChoice}, You Win! `;
 
 // Determine the winner based on the choices
 function determineWinner(userChoice, computerChoice) {
@@ -47,13 +44,14 @@ function determineWinner(userChoice, computerChoice) {
   } else {
     switch (userChoice) {
       case 'scissors':
-        return computerChoice === 'rock' ? `${computerMessage} \n` : `${userMessage}!`;
-      case 'paper':
-        return computerChoice === 'scissors' ? `${computerMessage}` : `${userMessage}!`;
-      case 'rock':
-        return computerChoice === 'paper' ? `${computerMessage}` : `${userMessage}!`;
-      default:
-        return 'Invalid choice. Please try again!';
+        return computerChoice === 'rock' ? `${computerMessage}        \n` : `${userMessage}!`;
+        case 'paper':
+          return computerChoice === 'scissors' ? `${computerMessage}` : `${userMessage}!`;
+        case 'rock':
+          return computerChoice === 'paper' ? `${computerMessage}` : `${userMessage}!`;
+        default:
+          return 'Invalid choice. Please try again!';
+      }
     }
   }
-}
+  
